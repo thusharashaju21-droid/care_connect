@@ -1,0 +1,42 @@
+#============DOCTORS============
+
+#api call for listing doctors
+###
+GET http://127.0.0.1:8000/doctors/
+Accept: application/json
+
+
+#api call for creating doctor details
+###
+POST http://127.0.0.1:8000/doctors/ 
+Content-Type: application/json
+
+{
+    "name": "Dr. Arun",
+    "specialization": "pediatrics",
+    "fee": 600,
+    "qualification": "MBBS, MD Pediatrics",
+    "email": "arun@gmail.com"
+}
+
+#api calls for retrieve doctor details
+###
+GET  http://127.0.0.1:8000/doctors/2/
+Accept: application/json
+
+#api calls for update
+###
+PUT http://127.0.0.1:8000/doctors/1/
+Content-Type: application/json
+
+{
+    "name": "Dr Sooraj Das",
+    "specialization": "radiology",
+    "fee": 700,
+    "qualification": "MBBS, MD radiology",
+    "email": "soorajdas683@gmail.com"
+}
+
+#api calls for delete doctor deails
+###
+DELETE http://127.0.0.1:8000/doctors/2/
