@@ -40,3 +40,30 @@ Content-Type: application/json
 #api calls for delete doctor deails
 ###
 DELETE http://127.0.0.1:8000/doctors/2/
+
+
+# v2 end points
+###
+GET http://127.0.0.1:8000/v2/doctors/
+Accept: application/json
+
+
+#api call for adding doctor
+###
+POST http://127.0.0.1:8000/v2/doctors/ 
+Content-Type: application/json
+
+{
+    "name": "Dr. Shaju",
+    "specialization": "nephrology",
+    "fee": 600,
+    "qualification": "MBBS, MD nephrology",
+    "email": "shaju@gmail.com"
+}
+
+
+###
+GET  http://127.0.0.1:8000/v2/doctors/4/
+Accept: application/json
+
+
