@@ -24,7 +24,7 @@ Content-Type: application/json
 GET  http://127.0.0.1:8000/doctors/2/
 Accept: application/json
 
-#api calls for update
+#api calls for update doctor details
 ###
 PUT http://127.0.0.1:8000/doctors/1/
 Content-Type: application/json
@@ -48,7 +48,7 @@ GET http://127.0.0.1:8000/v2/doctors/
 Accept: application/json
 
 
-#api call for adding doctor
+#api call for adding doctor details
 ###
 POST http://127.0.0.1:8000/v2/doctors/ 
 Content-Type: application/json
@@ -61,9 +61,34 @@ Content-Type: application/json
     "email": "shaju@gmail.com"
 }
 
-
+#api call for retrieve doctor details
 ###
 GET  http://127.0.0.1:8000/v2/doctors/4/
 Accept: application/json
 
 
+#api call for update doctor details
+###
+PUT  http://127.0.0.1:8000/v2/doctors/4/
+Content-Type: application/json
+
+
+{
+  "id": "4",
+  "name": "Dr. Ram krishna",
+  "specialization": "ent",
+  "fee": 550,
+  "qualification": "MBBS, MS ENT",
+  "email": "ramk@gmail.com"
+}
+
+#api call for creating admin user
+###
+POST http://127.0.0.1:8000/v2/admin-register/
+Content-Type: application/json
+
+{
+    "username" : "admin",
+    "email" : "admin@gmail.com",
+    "password" : "admin@123"
+}
