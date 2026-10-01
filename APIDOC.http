@@ -41,7 +41,7 @@ Content-Type: application/json
 ###
 DELETE http://127.0.0.1:8000/doctors/2/
 
-
+#--------------------V2------------------------
 # v2 end points
 ###
 GET http://127.0.0.1:8000/v2/doctors/
@@ -91,4 +91,24 @@ Content-Type: application/json
     "username" : "admin",
     "email" : "admin@gmail.com",
     "password" : "admin@123"
+}
+
+#--------------------------APPOINTMENTS--------------------------------
+#api call for listing bookings 
+###
+GET http://127.0.0.1:8000/appoinment/
+Accept: application/json
+
+
+#api call for create patients bookings
+###
+POST http://127.0.0.1:8000/appoinment/
+Content-Type: application/json
+
+{
+    "patient_name": "Manju",
+    "phone": "9876544567",
+    "doctor": 4,
+    "appointment_date": "2026-10-11",
+    "problem": "Throat pain"
 }
